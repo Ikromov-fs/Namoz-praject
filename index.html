@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/script.js" defer></script>
+    <title>namozvaqti.uz</title>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <nav class="header__nav">
+                <div class="header__icons">
+                    <img src="./icons/namoz.png" alt="icons" width="60" height="60">
+                    <p class="header__icons__text">Namoz vaqti</p>
+                </div>
+                <div class="istihfor__div">
+                    <p class="istihfor">alhamdulillah</p>
+                </div>
+                <div class="header__adminlink">
+                    <a class="header__adminlink__text">ikromov</a>
+                    <img src="./icons/ikromov.uz.svg" alt="ikromov" width="60" height="60">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section>
+            <div class="container">
+                <div class="wropper">
+                    <div class="wropper__data">
+                        <div class="timer" id="timeofyear">
+                            <span class="timeYear" id="day"></span>.
+                            <span class="timeYear" id="math"></span>.
+                            <span class="timeYear" id="year"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <select class="section__select" id="select">
+                            <option value="jizzax">Jizzax</option>
+                            <option value="toshkent">Toshkent</option>
+                            <option value="samarkand">Samarqand</option>
+                            <option value="qashqadaryo">Qashqadaryo</option>
+                            <option value="surxandaryo">Surxondaryo</option>
+                            <option value="navoiy">Navoiy</option>
+                            <option value="bukhara">Buxoro</option>
+                        </select>
+                    </div>
+                    <div class="wropper__current">
+                        <div class="timer" id="timeofhour">
+                            <span id="hour"></span> :
+                            <span id="minutes"></span> :
+                            <span id="secunts"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="big__part container">
+                <div class="nomoz__time">
+                    <div class="bomdod active" id="bomdod">
+                        <div class="bomdod__part">
+                            <h3 class="bomdod__time">06:07</h3>
+                            <p class="bomdod__text">Bomdod</p>
+                            <h4 class="exit__bomdod">02:58</h4>
+                            <button class="btn" id="btnBomdod">O'qish tartibi</button>
+                        </div>
+                    </div>
+                    <div class="peshin" id="peshin">
+                        <div class="bomdod__part">
+                            <h3 class="bomdod__time">13:00</h3>
+                            <p class="bomdod__text">Peshin</p>
+                            <h4 class="exit__bomdod">05:58</h4>
+                            <button class="btn" id="btnPeshin">O'qish tartibi</button>
+                        </div>
+                    </div>
+                    <div class="asr" id="asr">
+                        <div class="bomdod__part">
+                            <h3 class="bomdod__time">16:07</h3>
+                            <p class="bomdod__text">Asr</p>
+                            <h4 class="exit__bomdod">02:58</h4>
+                            <button class="btn" id="btnAsr">O'qish tartibi</button>
+                        </div>
+                    </div>
+                    <div class="shom" id="shom">
+                        <div class="bomdod__part">
+                            <h3 class="bomdod__time">18:15</h3>
+                            <p class="bomdod__text">Shom</p>
+                            <h4 class="exit__bomdod">02:58</h4>
+                            <button class="btn" id="btnShom">O'qish tartibi</button>
+                        </div>
+                    </div>
+                    <div class="xufton" id="xufton">
+                        <div class="bomdod__part">
+                            <h3 class="bomdod__time">19:17</h3>
+                            <p class="bomdod__text">Xufton</p>
+                            <h4 class="exit__bomdod">04:58</h4>
+                            <button class="btn" id="btnXufton">O'qish tartibi</button>
+                        </div>
+                    </div>
+                    <div class="tahajjud" id="tahajjud">
+                        <div class="bomdod__part">
+                            <h3 class="bomdod__time">06:07</h3>
+                            <p class="bomdod__text">Vitr</p>
+                            <h4 class="exit__bomdod">03:58</h4>
+                            <button class="btn" id="btnVitr">O'qish tartibi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Madal -->
+            <div class="madal delete" id="madal">
+                <div class="madal__parent">
+                    <span class="hidden__madal" id="madal__hidden">X</span>
+                    <div class="text__namoz read__bomdod" id="bomdodText">
+                        <h4 class="namoz__title">Bomdod namozi</h4>
+                        <div class="read__bomdod__text">
+                            Bomdod namozi ikki rakat sunnat, ikki rakat farz – jami to'rt rakatdan iborat.
+                            Bomdod namozining ikki rakat sunnati quyidagicha o'qiladi:
+                            <p class="part"> 1. «Alloh rizoligi uchun qibla tomonga yuzlanib, bugungi bomdod
+                                namozining ikki rakat
+                                sunnatini o'qishni niyat qildim», deb ko'ngildan o'tkaziladi.
+                            </p>
+                            <p class="part">2. «Allohu akbar», deb iftitoh takbiri aytiladi. Bu takbirda erkaklar
+                                qo'llar kaftini
+                                qiblaga qaratib, bosh barmoqlarining uchini quloqlarining yumshoq joyiga tekkizishadi.
+                                Ayollar qo'llarini yelka barobarida ko'taradilar.
+                            </p>
+                            <p class="part">3. Qo'llar bog'lanadi. Erkaklar o'ng qo'l kaftini chap qo'l ustiga
+                                qo'yishadi. O'ng
+                                qo'lning bosh va kichik barmoqlari bilan chap qo'l bilagini ushlashadi.
+                                Ayollar o'ng qo'lni chap qo'l us-tida tutib, qo'llarini ko'krakka qo'yadilar. Bu hol
+                                «qiyom» deyiladi. Qiyomda (tik turgan holda) sajda qilinadigan joyga qarab, navbati
+                                bilan, quyidagilar o'qiladi.
+                            </p>
+                            <p class="part">
+                            <h4> SANO DUOSI</h4>
+                            Subhanakallouhumma va bihamdika va tabarokasmuka va taa’la jadduka va la ilaha g‘oyruk.
+                            Ma'nosi: «Allohim! Sening noming muborakdir. Shon-sharafing ulug'dir. Sendan o'zga iloh
+                            yo'qdir».
+                            </p>
+                            <p class="part">
+                            <h4>FOTIHA SURASI</h4>
+                            A’uzu billahi minash shaytonir rojiym. Bismillahir rohmanir rohiym. Al hamdulillahi
+                            robbil ‘alamiyn. Ar-rohmanir rohiym. Maliki yavmiddiyn. Iyyaka na’budu va iyyaka
+                            nasta’iyn. Ihdinas sirotol mustaqiym. Sirotollaziyna an’amta ‘alayhim g‘oyril mag‘zubi
+                            ‘alayhim valazzolliyn.
+                            </p>
+                            <p class="part">Fotiha surasidan so'ng bir zam (qo'shimcha) sura o'qiladi.
+                                Yangi o'rganuvchilar quyidagi kichik suralardan birini zam qilishsa bo'ladi:
+                            </p>
+                            <p class="part">
+                            <h4>KAVSAR SURASI</h4>
+                            Inna a’toynakal-kavsar. Fa solli lirobbika vanhar. Inna shaniaka huval abtar.
+                            </p>
+                            <p class="part">
+                                4. Zam sura tugagach, «Allohu akbar», deb ruku qilinadi. Erkaklar tirsaklari va
+                                tizzalarini bukmasdan, barmoqlarini ochgan holda, tizzalarini mahkam changallab
+                                egiladilar.
+                                Ayollar erkaklarga nisbatan ozroq egiladilar. Tizzalarini bir oz bukadilar. Barmoqlarini
+                                jamlab tizzalarini tutadilar.
+                                Rukuda uch marta «Subhana robbiyal aziym» (Ey buyuk Robbim, Sen barcha nuqsonlardan
+                                poksan), deyiladi.
+                            </p>
+                            <p class="part">
+                                5. Rukudan «Sami'allohu liman hamidah» (Alloh Uni hamd etganlarni eshitguvchidir), deb
+                                qad ko'tariladi, bu holat «qavma» deyiladi.
+                                Qavma holida: «Robbana lakal hamd» (Ey Robbimiz, har turli hamd-sanolar yolg'iz
+                                Sengadir), deyiladi.
+                            </p>
+                            <p class="part">
+                                6. «Allohu akbar» deb avvalo tizzalar, ke-yin qo'llar, so'ng peshona va burun yerga
+                                tekkizilib, sajda qilinadi. Sajda qi-linayotganda oyoq panjalari qiblaga qaratiladi,
+                                erkaklarning tirsaklari yerga tegmaydi. Ayollar tirsaklarini yerga qo'yadilar. Sajdada
+                                uch marta: «Subhana robbiyal a'la» (Ey ulug' Robbim, Sen butun nuqsonlardan poksan),
+                                deyiladi
+                            </p>
+                            <p class="part">
+                                7. «Allohu akbar» deb sajdadan bosh ko'tariladi va tiz cho'kkan holda bir oz o'tiriladi,
+                                bu holat «jalsa» deyiladi. Jalsada qo'llar, barmoqlar o'z holicha tutilib, songa
+                                qo'yiladi. Barmoq uchlari tizza bilan teng bo'lishi lozim.
+
+                            </p>
+                            <p class="part">
+                                Erkaklar chap oyoqlari ustiga o'tiradilar. O'ng oyoq panjalari qiblaga qaratiladi.
+                                Ayollar oyoqlarini o'ng tarafdan chiqarib o'tiradilar.
+                            </p>
+                            <p class="part">
+                                8. «Allohu akbar», deb ikkinchi marta sajda qilinadi. Sajdada uch marta: «Subhana
+                                robbiyal a'la», deyiladi. Shu bilan birinchi rakat tugaydi.
+                            </p>
+                            <p class="part">
+                                9. «Allohu akbar», deb qiyomga (tikka) turiladi.
+                            </p>
+                            <p class="part">
+                                10. Qiyomda «Bismillahir rohmanir rohiym»dan boshlab, Fotiha surasi, orqasidan bir zam
+                                sura o'qiladi.
+
+                            </p>
+                            <p class="part">
+                                11. «Allohu akbar», deb ruku qilinadi. Rukuda uch marta «Subhana robbiyal aziym»,
+                                deyiladi.
+                            </p>
+                            <p class="part">
+                                12. «Sami'allohu liman hamidah», deb tik turiladi, ketidan «Robbana lakal hamd»,
+                                deyiladi.
+                            </p>
+                            <p class="part">
+                                13. «Allohu akbar», deb sajdaga boriladi. Sajdada uch marta «Subhana robbiyal a'la»,
+                                deyiladi.
+                            </p>
+                            <p class="part">
+                                14. «Allohu akbar», deb sajdadan bosh ko'tariladi va bir oz o'tiriladi.
+                            </p>
+                            <p class="part">
+                                15. «Allohu akbar», deb ikkinchi bor sajda qilinadi. Sajdada uch marta: «Subhana
+                                robbiyal a'la», deyiladi.
+                            </p>
+                            <p class="part">
+                                16. «Allohu akbar», deb sajdadan bosh ko'tarilib qa'dada o'tiriladi va quyidagilar
+                                o'qiladi:
+                            </p>
+                            <p class="part">
+                            <h4>«ATTAHIYYAT» DUOSI</h4>
+                            Attahiyyatu lillahi vas-solavatu vattoyyibat. Assalamu ‘alayka ayyuhan-nabiyyu va
+                            rohmatullohi va barokatuh. Assalamu ‘alayna va ‘ala ibadillahis-solihiyn. Ashhadu alla
+                            ilaha illallohu va ashhadu anna Muhammadan ‘abduhu va rosuluh.
+                            </p>
+                            <p class="part">
+                            <h4>SALOVOT</h4>
+
+                            Allohumma solli ‘ala Muhammadiv-va ‘ala ali Muhammad. Kama sollayta ‘ala Ibrohima va
+                            ‘ala ali Ibrohim. Innaka hamidum-majid. Allohumma barik ‘ala Muhammadiv-va ‘ala ali
+                            Muhammad. Kama barokta ‘ala Ibrohima va ‘ala ali Ibrohim. Innaka hamidum-majid.
+                            </p>
+                            <p class="part">
+                            <h4> DUO</h4>
+                            Robbana atina fid-dunya hasanatav-va fil axiroti hasanatav-va qina azaban-nar.
+                            </p>
+                            <p class="part">
+                                17. Avval o'ng, keyin chap yelkaga qarab: «Assalamu alaykum va rohmatulloh» deb salom
+                                berilib namozdan chiqiladi.
+                            </p>
+                            <p class="part">
+                                Allohu akbar, Allohu akbar,
+                                Allohu akbar, Allohu akbar.
+                                Ashhadu alla ilaha illalloh,
+                                Ashhadu alla ilaha illalloh.
+                                Ashhadu anna Muhammadar rosululloh,
+                                Ashhadu anna Muhammadar rosululloh.
+                                Hayya 'alas-solah, hayya'alas-solah,
+                                Hayya 'alal-falah, hayya'alal-falah.
+                                Qod qomatis-solah, qod qomatis-solah
+                                Allohu akbar, Allohu akbar,
+                                La ilaha illalloh.
+                            </p>
+                            <p class="part">
+                                Iqomat takbirining lafzlari azonnikiga o'xshaydi, farqi — bunisi tez aytiladi.
+                                Bomdod namozining farziga quyidagicha niyat qilinadi: «Alloh rizoligi uchun bomdod
+                                namozining ikki rakat farzini o'z vaqtida o'qishni niyat qildim».
+                                Qolgan qismi sunnat bilan bir xil davom etaveradi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- peshin -->
+
+                    <div class="read__bomdod text__namoz" id="peshinText">
+                        <h4 class="namoz__title">Peshin namozi</h4>
+                        <div class="read__peshin__text">
+                            <p class="part">
+                                Peshin namozi to'rt rakat sunnat, to'rt rakat farz va ikki rakat sunnatdan iborat.
+                                To'rt rakat sunnat quyidagicha o'qiladi:
+                            </p>
+                            <p class="part">
+                                1. Niyat qilinadi. <br>
+                                2. Iftitoh takbiri aytiladi. <br>
+                                3. Sano duosi o'qiladi. <br>
+                                4. Fotiha surasi. Keyin birorta zam sura. <br>
+                                5. Ruku. <br>
+                                6. Sajda. <br>
+                                7. «Allohu akbar» deb turib, yana Fotiha surasi, zam sura. <br>
+                                8. Ruku. <br>
+                                9. Sajda. <br>
+                                10. O'tirib «Attahiyyat» o'qiladi. <br>
+                                11. «Allohu akbar» deb yana turib, Fotiha surasi va zam sura. <br>
+                                12. Ruku. <br>
+                                13. Sajda. <br>
+                                14. «Allohu akbar» deb to'rtinchi rakatga turiladi. Yana Fotiha surasi va zam sura. <br>
+                                15. Ruku. <br>
+                                16. Sajda. <br>
+                                17. O'tirib, «Attahiyyat», «Salovot», «Robbana» duolari o'qiladi. <br>
+                                18. Salom berib namozdan chiqiladi. <br>
+                                Peshin namozining farzi ham ayni shu tartibda o'qiladi. Faqatgina niyat qilinayotganda
+                                «Alloh roziligi uchun peshin namozining to'rt rakat farzini o'qishga niyat qildim»,
+                                deyiladi. Bundan tashqari, farzda uchinchi va to'rtinchi rakatlarda «Fotiha»dan keyin
+                                zam
+                                sura qo'shilmaydi.
+                                Peshin namozining ikki rakat sunnati bomdod namozining sunnati kabi o'qiladi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Asr -->
+
+                    <div class="text__namoz read__bomdod" id="asrText">
+                        <h4>Asr namozi</h4>
+                        <p class="part">Asr namozi to'rt rakat farzdan iborat. Bu namoz bilan peshin namozi farzining
+                            o'qilishi bir
+                            xil. Niyatda «Asr namozining to'rt rakat farzini...» deyilsa bo'ldi.
+                        </p>
+                    </div>
+
+                    <!-- Shom -->
+
+                    <div class="text__namoz read__bomdod" id="shomText">
+                        <div class="read__shom__text">
+                            <h4>Shom namozi</h4>
+                            <p>
+                                Shom namozi uch rakat farz va ikki rakat sunnatdan iborat. Uch rakatli farzning
+                                o'qilishi:
+                                <br>
+                                1. Niyat. <br>
+                                2. Iftitoh takbiri. <br>
+                                3. Sano. <br>
+                                4. Fotiha, zam sura. <br>
+                                5. Ruku. <br>
+                                6. Sajda. <br>
+                                7. Turib, Fotiha, zam sura. <br>
+                                8. Ruku. <br>
+                                9. Sajda. <br>
+                                10. O'tirib, «Attahiyyat». <br>
+                                11. Turib, faqat Fotiha. <br>
+                                12. Ruku. <br>
+                                13. Sajda. <br>
+                                14. O'tirib, «Attahiyyat», «Salovot», «Robbana» duolari. <br>
+                                15. Salom. <br>
+                                Shom namozining ikki rakat sunnati bomdod namozining ikki rakat sunnati kabi o'qiladi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Xufton -->
+
+                    <div class="text__namoz read__bomdod" id="xuftonText">
+                        <h4>Xufton namozi</h4>
+                        <p class="part">
+                            Xufton namozi to'rt rakat farz, ikki rakat sunnatdan iborat.
+                            Xufton namozining to'rt rakat farzi peshin namozining farzi kabi o'qilib, faqat niyatda farq
+                            bo'ladi. Xuftonning ikki rakat sunnati ham yuqorida o'rganganimiz bomdod va shom
+                            namozlarining ikki rakat sunnatlari kabi bir xil tartibda o'qiladi.
+                        </p>
+                    </div>
+
+                    <!-- Vitr -->
+
+                    <div class="text__namoz read__bomdod" id="vitrText">
+                        <h4>VITR NAMOZI</h4>
+                        <p>
+                            Vitr namozi uch rakatli bo'lib, vojib ibodat sanaladi. Farzdan quyiroq, sunnatdan ulug'
+                            turadi. O'qilishi shart. Biror sabab ila vaqtida o'qilmay qolsa, qazosi o'qiladi. Vitr
+                            namozi xufton namozidan keyin o'qiladi. <br>
+                            Quyidagi tartibda ado etiladi: <br>
+                            1. Niyat. <br>
+                            2. Iftitoh takbiri. <br>
+                            3. Sano. <br>
+                            4. Fotiha, zam sura. <br>
+                            5. Ruku. <br>
+                            6. Sajda. <br>
+                            7. Ikkinchi rakatga turib, «Fotiha», zam sura. <br>
+                            8. Ruku. <br>
+                            9. Sajda. <br>
+                            10. O'tirib, «Attahiyyat» duosi. <br>
+                            11. Uchinchi rakatga turib «Fotiha», zam sura. <br>
+                            12. Zam suradan keyin o'sha tik turgan holda «Allohu akbar», deb quloq qoqiladi. <br>
+                            13. Qo'l qovushtirilib, Qunut duosi o'qiladi. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="tasbex footer container">
+            <div class="tasbex__div">
+                <img class="img" id="tasbex__img" src="./img/tasbex.png" alt="tasbeh" width="60">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
