@@ -1,7 +1,6 @@
 "use strict";
 
 window.addEventListener('DOMContentLoaded', () => {
-
     // Timer
     function currentDom() {
         let timeOfYear = document.querySelector('#timeofyear');
@@ -118,17 +117,33 @@ window.addEventListener('DOMContentLoaded', () => {
         apiData()
     })
 
+    // let fullData = '';
+
+    let newDate = new Date()
+    let hour = newDate.getHours()
+    console.log(hour);
     function apiData() {
         fetch(`https://islomapi.uz/api/present/week?region=${city}`)
             .then(res => res.json())
             .then(data => {
-                apiTimes(timerBomdod, `${data[0].times.tong_saharlik}`, "Bomdod", "btnBomdod")
-                apiTimes(timerPeshin, `${data[0].times.peshin}`, "Peshin", "btnPeshin")
-                apiTimes(timerAsr, `${data[0].times.asr}`, "Asr", "btnAsr")
-                apiTimes(timerShom, `${data[0].times.shom_iftor}`, "Shom", "btnShom")
-                apiTimes(timerXufton, `${data[0].times.hufton}`, "Xufton", "btnXufton")
-                apiTimes(timerVitr, `${data[0].times.hufton}`, "Vitr", "btnVitr")
+                console.log(data);
+                apiTimes(timerBomdod, `${data[0].times.tong_saharlik}`, "Bomdod", "btnBomdod");
+                apiTimes(timerPeshin, `${data[0].times.peshin}`, "Peshin", "btnPeshin");
+                apiTimes(timerAsr, `${data[0].times.asr}`, "Asr", "btnAsr");
+                apiTimes(timerShom, `${data[0].times.shom_iftor}`, "Shom", "btnShom");
+                apiTimes(timerXufton, `${data[0].times.hufton}`, "Xufton", "btnXufton");
+                apiTimes(timerVitr, `${data[0].times.hufton}`, "Vitr", "btnVitr");
+
+                names(`${data[0].times.peshin}`, `${data[0].times.tong_saharlik}`)
             })
+
+        function active(item) {
+            let acitives = document.querySelector('.acitives')
+            if (newDate == item) {
+                acitives.classList.add('acrive')
+            }
+        }
+        
         function apiTimes(div, time, nameNamoz, id) {
             div.innerHTML = `
             <div class="bomdod__part">
@@ -141,4 +156,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     apiData()
+
+
 })
