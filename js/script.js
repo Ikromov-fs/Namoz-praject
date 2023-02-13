@@ -103,4 +103,42 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-});
+    // NAMOZ TIMER
+    // API
+    let city = 'jizzax'
+    let select = document.querySelector('#select');
+    let timerBomdod = document.querySelector('#bomdod');
+    let timerPeshin = document.querySelector('#peshin');
+    let timerAsr = document.querySelector('#asr');
+    let timerShom = document.querySelector('#shom');
+    let timerXufton = document.querySelector('#xufton');
+    let timerVitr = document.querySelector('#vitr');
+    select.addEventListener('change', (e) => {
+        city = e.target.value;
+        apiData()
+    })
+
+    function apiData() {
+        fetch(`https://islomapi.uz/api/present/week?region=${city}`)
+            .then(res => res.json())
+            .then(data => {
+                apiTimes(timerBomdod, `${data[0].times.tong_saharlik}`, "Bomdod", "btnBomdod")
+                apiTimes(timerPeshin, `${data[0].times.peshin}`, "Peshin", "btnPeshin")
+                apiTimes(timerAsr, `${data[0].times.asr}`, "Asr", "btnAsr")
+                apiTimes(timerShom, `${data[0].times.shom_iftor}`, "Shom", "btnShom")
+                apiTimes(timerXufton, `${data[0].times.hufton}`, "Xufton", "btnXufton")
+                apiTimes(timerVitr, `${data[0].times.hufton}`, "Vitr", "btnVitr")
+            })
+        function apiTimes(div, time, nameNamoz, id) {
+            div.innerHTML = `
+            <div class="bomdod__part">
+                <h3 class="bomdod__time">${time}</h3>
+                <p class="bomdod__text">${nameNamoz}</p>
+                <h4 class="exit__bomdod">03:58</h4>
+                <button class="btn" id="${id}">O'qish tartibi</button>
+            </div>
+            `
+        }
+    }
+    apiData()
+})

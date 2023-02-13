@@ -156,6 +156,7 @@ section {
 .xufton,
 .tahajjud {
     width: 150px;
+    height: 100%;
     gap: 10px;
     padding: 15px 15px;
     background: rgba(200, 79, 18, 0.55);
@@ -305,7 +306,8 @@ section {
         overflow: scroll;
         overflow-x: hidden;
     }
-    .read__shom__text{
+
+    .read__shom__text {
         padding-top: 18px;
     }
 }
@@ -322,9 +324,6 @@ section {
 
 
 }
-
-@media(max-width: 560px) {}
-
 
 /* FOOTER */
 
