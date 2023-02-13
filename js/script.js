@@ -153,7 +153,6 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="bomdod__part">
                 <h3 class="bomdod__time">${time}</h3>
                 <p class="bomdod__text">${nameNamoz}</p>
-                <h4 class="exit__bomdod">03:58</h4>
                 <button class="btn" id="${id}">O'qish tartibi</button>
             </div>
             `
@@ -161,5 +160,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     apiData()
 
+    // <h4 class="exit__bomdod">03:58</h4>
 
 })
