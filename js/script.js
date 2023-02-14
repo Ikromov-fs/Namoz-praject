@@ -133,7 +133,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     let minutes = timeNol(timer.getMinutes())
                     let t = `${hour}:${minutes}`
 
-                    if (t >= `${data[0].times.tong_saharlik}` && t < `${data[0].times.peshin}`) {
+                    if (t >= `${data[0].times.tong_saharlik}` && t < `${data[0].times.quyosh}`) {
                         timerBomdod.classList.add('active')
                     } else if (t >= `${data[0].times.peshin}` && t < `${data[0].times.asr}`) {
                         timerPeshin.classList.add('active')
